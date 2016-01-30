@@ -7,6 +7,7 @@ end
 def ရေး(စာ) puts စာ; end
 
 def တန်ဖိုး(lbl)
+	return nil if lbl.nil?
 	n = %w(0 1 2 3 4 5 6 7 8 9 .)
 	un = %w(၀ ၁ ၂ ၃ ၄ ၅ ၆ ၇ ၈ ၉ .)
 	(lbl.to_s.split("").collect do |c| n[un.index(c)] unless un.index(c).nil?;end).join("").to_i
